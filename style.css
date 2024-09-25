@@ -68,7 +68,10 @@ body {
     font-size: 1.6vw;
     color: white;
 }
-
+#navright a{
+    text-decoration: none;
+    color: white;
+}
 #navleft {
     display: flex;
 }
@@ -622,6 +625,7 @@ button:hover {
     margin-top: 1vw;
     padding-left: 1vw;
     font-weight: 400;
+    line-height: 1.3vw;
 }
 
 #contact {

@@ -33,7 +33,14 @@ function loco(){
     
     // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
     ScrollTrigger.refresh();
-    
+
+    document.querySelectorAll("#navleft a","").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = this.getAttribute("href");
+          locoScroll.scrollTo(target);
+        });
+    });
 }
 
 function time(){
