@@ -1,7 +1,7 @@
 function mousefollow(dets) {
     var mouse = document.querySelector("#mousefollower");
     document.addEventListener("mousemove",function(dets){
-        mouse.style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)` 
+        mouse.style.transform = `translate(-50%, -50%) translate(${dets.clientX}px, ${dets.clientY}px)` 
 })
 }
 function loco(){
@@ -306,6 +306,33 @@ function contact() {
         }
     })
 }
+function navpopup(){
+    var menu = document.querySelector("#menu")
+    var close = document.querySelector("#close")
+    
+    menu.addEventListener("click",function(){
+        var tl = gsap.timeline();
+       tl.to("#nav-PopUp",{
+        top: 0,
+        duration: 0.5,
+        ease: Power1
+       })
+       tl.from("#links a",{
+        opacity: 0,
+        y: -100,
+        stagger: 0.5,
+        ease: Power1
+       })
+    })
+    close.addEventListener("click",function(){
+        gsap.to("#nav-PopUp",{
+            top: "-100%",
+            duration: 0.5,
+            ease: Power1
+           })
+    })
+}
+navpopup()
 loco()
 mousefollow()
 myskill()
