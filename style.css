@@ -755,7 +755,6 @@ form button {
         top: -100%;
         left: 0;
         width: 100vw;
-        height: 0vh;
         background-color: rgba(0, 255, 255, 0.194);
         backdrop-filter: blur(20px);
         z-index: 1000;
